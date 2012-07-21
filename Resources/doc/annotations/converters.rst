@@ -95,10 +95,8 @@ If the Doctrine Converter (or any other Persistent Object Converter) could not
 convert an object, you can use the generic object converter to map request data
 to an object.
 
-- If the request method is HEAD, GET, the query data is used to construct the
-  target object.
-- If the request method is any other the request data is used to construct the
-  target object.
+- Only data from the request query is used to construct the target object.
+  To work with POST data, you should use the form framework.
 - If the data is an array, the keys are matched against parameter variable names in the
   target object constructor.
 - If the data is a scalar value it is assumed to be a one-parameter
