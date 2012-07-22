@@ -9,6 +9,7 @@
         <parameter key="sensio_framework_extra.converter.manager.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ParamConverterManager</parameter>
         <parameter key="sensio_framework_extra.converter.doctrine.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DoctrineParamConverter</parameter>
         <parameter key="sensio_framework_extra.converter.object.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\ObjectParamConverter</parameter>
+        <parameter key="sensio_framework_extra.converter.datetime.class">Sensio\Bundle\FrameworkExtraBundle\Request\ParamConverter\DateTimeParamConverter</parameter>
     </parameters>
 
     <services>
@@ -27,6 +28,9 @@
         <service id="sensio_framework_extra.converter.object" class="%sensio_framework_extra.converter.object.class%">
             <tag name="request.param_converter" priority="-255" /><!-- has to be the very last one -->
             <argument type="service" id="validator" on-invalid="ignore" />
+        </service>
+        <service id="sensio_framework_extra.converter.datetime" class="%sensio_framework_extra.converter.datetime.class%">
+            <tag name="request.param_converter" />
         </service>
     </services>
 </container>
