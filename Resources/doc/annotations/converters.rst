@@ -106,15 +106,11 @@ to an object.
   input.
 - The construction is recursive and allows to assemble object graphs. DateTime
   is handled as special case.
-- The target object is passed to the validator component and an HTTP 400 error
-  is thrown is the validation does not pass. You can control the validation
-  groups with an option ``validation_groups``.
 
 Example::
 
     /**
      * @Route("/blog")
-     * @ParamConverter("criteria", options={"validation_groups": {"default", "other"}})
      */
     public function listAction(PostCriteria $criteria)
     {
