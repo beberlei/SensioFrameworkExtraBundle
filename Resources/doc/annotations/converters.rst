@@ -65,6 +65,11 @@ Doctrine Converter
 ~~~~~~~~~~~~~~~~~~
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+Converter Name: ``doctrine.orm``
+
+>>>>>>> sensio/master
 The Doctrine Converter attempts to convert request attributes to Doctrine
 entities fetched from the database. Two different approaches are possible:
 
@@ -79,9 +84,12 @@ The following algorithm determines which operation will be performed.
 - If the previous rules do not apply, attempt to find one entity by matching
   route parameters to entity fields. You can control this process by
   configuring ``exclude`` parameters or a attribute to field name ``mapping``.
+<<<<<<< HEAD
 =======
 Converter Name: ``doctrine.orm``
 >>>>>>> origin/NamedParamConverters
+=======
+>>>>>>> sensio/master
 
 By default, the Doctrine converter uses the *default* entity manager. This can
 be configured with the ``entity_manager`` option::
